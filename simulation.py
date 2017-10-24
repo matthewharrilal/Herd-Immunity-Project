@@ -56,15 +56,12 @@ class Simulation(object):
 
             new_population.append(person)
             self.next_person_id += 1
-        print("All Humans Created...")
         return new_population
 
     def _simulation_should_continue(self):
         print("Current Population Size:  {}\tCurret Infected:  {}".format(self.current_population_size, self.current_infected))
         if self.current_population_size == 0 or self.current_infected == 0:
-            print("Contine? False")
             return False
-        print("Contine? True")
         return True
 
     def run(self):
@@ -127,7 +124,7 @@ class Simulation(object):
 
                 self.current_infected -= 1
                 print("Populace infected", self.current_infected)
-        print("Get new newly_infected list")
+        print("The newly infected populace")
         self.newly_infected = []
 
 
